@@ -1,0 +1,360 @@
+#home {
+  padding-top: 80px;
+  /* Ajuste esse valor de acordo com a altura da sua navbar */
+}
+
+.title {
+  padding-top: 8%;
+  margin-bottom: 3%;
+  color: black;
+  text-align: center;
+  font-size: 50px;
+}
+
+.carousel {
+  margin-bottom: 20px;
+}
+
+.carouselInner {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.image {
+  transition: transform 0.3s ease;
+  /* Efeito de transição */
+}
+
+.image:hover {
+  transform: scale(1.1);
+  /* Efeito de zoom ao passar o mouse */
+}
+
+/* Imagem maior abaixo do carrossel */
+.largeImageContainer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  /* Centraliza a imagem maior */
+}
+
+.largeImage {
+  width: 1050px;
+  /* Largura igual à das 5 imagens acima */
+  height: auto;
+  /* Mantém a proporção */
+  object-fit: cover;
+  /* Preenche o espaço sem distorcer */
+}
+
+/* RESPONSIVIDADE PARA TELAS PEQUENAS (Mobile) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 35px;
+    /* Reduz o tamanho da fonte do título */
+  }
+
+  .carouselInner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image {
+    width: 100%;
+    /* As imagens do carrossel ocupam toda a largura */
+    height: auto;
+  }
+
+  .largeImageContainer {
+    margin-top: 30px;
+  }
+
+  .largeImage {
+    width: 100%;
+    /* A imagem maior se ajusta à tela */
+    height: auto;
+  }
+}
+
+/* RESPONSIVIDADE PARA TELAS EXTRAPORTÁVEIS (Tablets e Mobile Grande) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+    /* Tamanho ainda menor para dispositivos muito pequenos */
+  }
+
+  .carouselInner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image {
+    width: 100%;
+    /* Imagem ocupa 100% da largura da tela */
+    height: auto;
+  }
+
+  .largeImageContainer {
+    margin-top: 20px;
+  }
+
+  .largeImage {
+    width: 100%;
+    /* A imagem maior será 100% da tela */
+    height: auto;
+  }
+}
+
+/* PRODUTOS */
+.tituloProdutos {
+  color: #ff6d24;
+  font-size: 40px;
+}
+
+.produtosSection {
+  margin-top: 5%;
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(to bottom, #f5a23d, #f78d58);
+}
+
+.produtosGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.produtoCard {
+  margin-top: 2%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px !important;
+  /* Forçar largura dos cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  color: #202020;
+}
+
+.produtoCard:hover {
+  transform: scale(1.05);
+}
+
+.produtoImagem {
+  border-radius: 10px;
+}
+
+.preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d35400;
+}
+
+.quantidadeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.quantidadeContainer button {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.quantidadeContainer button:hover {
+  background: #c5b7b3;
+}
+
+.botaoCarrinho {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.botaoCarrinho:hover {
+  background: #219150;
+}
+
+/* RESPONSIVIDADE PARA TELAS PEQUENAS */
+@media (max-width: 768px) {
+  .produtosGrid {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .produtoCard {
+    width: 100% !important;
+    /* Forçando a largura 100% */
+    max-width: 300px !important;
+    /* Limitar a largura dos cards */
+    padding: 15px !important;
+  }
+
+  .tituloProdutos {
+    font-size: 30px !important;
+  }
+
+  .quantidadeContainer button {
+    font-size: 14px !important;
+  }
+
+  .botaoCarrinho {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .produtosGrid {
+    flex-direction: column !important;
+  }
+
+  .produtoCard {
+    width: 90% !important;
+    max-width: none !important;
+  }
+}
+
+
+/* LOCALIZAÇÃO */
+.tituloLocalizacao {
+  color: #219150;
+  font-size: 40px;
+}
+
+.localizacaoSection {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(to bottom, #d4fc79, #96e6a1);
+}
+
+.localizacaoSection h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.localizacaoSection p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.mapaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mapaImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* SOBRE NóS */
+.sobre {
+  background: linear-gradient(135deg, #f5715c, #ffb0a9);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Sombra para dar profundidade */
+}
+
+.titulo {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.descricao {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.titulo {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* RODAPÉ */
+.footer {
+  background-color: #252525;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  /* border-top: 1px solid #fff; */
+}
+
+.contatoInfo p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.endereco,
+.telefone,
+.email {
+  margin-bottom: 0.5rem;
+}
+
+.redesSociais {
+  margin-top: 1rem;
+}
+
+.icon {
+  margin: 0 15px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  /* Efeito de zoom nos ícones ao passar o mouse */
+}
+
+.copyright {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .icon {
+    margin: 0 10px;
+  }
+
+  .contatoInfo p {
+    font-size: 0.9rem;
+  }
+}

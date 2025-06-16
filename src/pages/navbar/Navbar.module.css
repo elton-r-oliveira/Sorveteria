@@ -1,0 +1,114 @@
+/* Navbar básica */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3b2822;
+  position: fixed;
+  /* Fixando a navbar */
+  top: 0;
+  /* Fixa no topo */
+  left: 0;
+  /* Alinha à esquerda */
+  width: 100%;
+  /* Ocupa a largura inteira da tela */
+  z-index: 1000;
+  /* Garante que a navbar fique sobre outros elementos */
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  height: 70px;
+}
+
+/* Links de navegação */
+.navLinks {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo dos itens da navbar */
+.navLinks li {
+  margin: 0 15px;
+}
+
+.navLinks a {
+  color: #cfcfcf;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: #f1c40f;
+}
+
+/* Botões de login e cadastrar */
+.authButtons {
+  display: flex;
+  gap: 15px;
+}
+
+.loginButton,
+.registerButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #0e556b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.loginButton:hover,
+.registerButton:hover {
+  background-color: #e67e22;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    /* Esconde os links de navegação por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    /* Ajuste conforme a altura da navbar */
+    right: 0;
+    background-color: #3b2822;
+    /* Cor de fundo para o menu suspenso */
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Exibir os links de navegação quando o menu hambúrguer for clicado */
+  .navLinks.active {
+    display: flex;
+  }
+
+  /* Ícone do menu hambúrguer */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  .hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+  }
+
+  /* Ajustar os botões para telas pequenas */
+  .authButtons {
+    display: none;
+    /* Esconde os botões de login e cadastro em telas pequenas */
+  }
+}
